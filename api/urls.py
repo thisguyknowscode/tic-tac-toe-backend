@@ -20,4 +20,6 @@ from tictactoe import views
 urlpatterns = [
     path('', views.index, name='home'),
     path('admin/', admin.site.urls),
+    path('user/<str:username>/', views.user, name='user'),
+    path('game/<int:game_id>/', views.game, name='game'),
 ]
